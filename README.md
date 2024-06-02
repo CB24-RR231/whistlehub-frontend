@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # WhistleHub Frontend
+=======
+# WhistleHub: Pusat Pelaporan Whistleblower (PDAM Kabupaten / Kota)
+>>>>>>> dad2a07 (first commit)
 
 WhistleHub adalah sebuah aplikasi pelaporan gangguan untuk layanan perusahaan air bersih di Kabupaten/Kota yang ada di Indonesia.
 
