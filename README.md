@@ -1,10 +1,5 @@
 # WhistleHub Frontend
 
-<<<<<<< HEAD
-WhistleHub adalah sebuah aplikasi pelaporan gangguan untuk layanan perusahaan air bersih di Kabupaten/Kota yang ada di Indonesia. 
-
-Capstone Project for Bootcamp Dicoding
-=======
 WhistleHub adalah sebuah aplikasi pelaporan gangguan untuk layanan perusahaan air bersih di Kabupaten/Kota yang ada di Indonesia.
 
 Capstone Project for Bootcamp Dicoding
@@ -17,4 +12,3 @@ NPM Installation use:
 
 Notes:
 Pastikan buat development branch masing2 sebelum melakukan Pull-Request ke Branch Main.
->>>>>>> dad2a07 (first commit)
