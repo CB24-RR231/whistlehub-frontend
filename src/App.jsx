@@ -1,4 +1,4 @@
-// import './styles/App.css'
+import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navigation />
-      {/* <h1>Vite + React</h1> */}
+      <Footer />
     </>
   )
 }

@@ -40,3 +40,50 @@ nav a:hover,
 	background-color: #dde6ed;
 	color: black;
 }
+
+.footer {
+	position: fixed;
+	background-color: #27374d;
+	color: #dde6ed;
+	text-align: center;
+	bottom: 0;
+	width: 100vw;
+	padding: 10px;
+	z-index: 1;
+}
+
+.footer .footer-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.footer .logo-footer {
+	width: 120px;
+	height: 50px;
+}
+
+.details-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	width: 200px; /* Example width */
+	height: 120px; /* Example height */
+}
+
+.details-footer a {
+	/* margin-top: auto; Align the link to the bottom of its container */
+	margin-top: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.footer .footer-bottom {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+}
