@@ -6,13 +6,13 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="copyright">
-        <p>&copy; 2024 - WhistleHub. All rights reserved.</p>
+        <FooterDetails />
+        <hr></hr>
         <p>
-          <DomainIcon /> Indonesia
+          <DomainIcon />Based on Indonesia
         </p>
+        <p>&copy; 2024 - WhistleHub. All rights reserved.</p>
       </div>
-      <hr></hr>
-      <FooterDetails />
     </footer>
   )
 }

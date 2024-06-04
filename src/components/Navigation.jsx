@@ -5,7 +5,7 @@ function Navigation() {
 		<div className='navigation'>
 			<Link to='/' className='logo-nav'>WhistleHub</Link>
 			<nav>
-				<Link to='#'>Pages1</Link>
+				<Link to='#'>Pages 1</Link>
 				<button
 					type='button'
 					className='sign-in-button'

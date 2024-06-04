@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function FooterDetails() {
   return (
-    <div className="footer-bottom">
+    <div className="footer-upper">
       <div className="details-footer">
         <p>Developed by: </p>
         <img src={logo} alt="logo" className="logo-footer" />
