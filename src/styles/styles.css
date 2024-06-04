@@ -1,0 +1,122 @@
+/* Navigation CSS Start */
+.navigation {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #27374d;
+	min-height: 80px;
+	z-index: 1;
+}
+
+.logo-nav {
+	font-size: large;
+	margin-left: 30px;
+	font-weight: 700;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-right: 20px;
+}
+
+nav a {
+	color: white;
+}
+
+.navigation a {
+	color: white;
+}
+
+nav a:hover,
+.navigation a:hover {
+	color: #526d82;
+	transition: ease-out;
+	transition-duration: 0.3s;
+}
+/* Navigation CSS End */
+
+.sign-in-button {
+	background-color: #526d82;
+	color: #dde6ed;
+}
+
+.sign-in-button:hover {
+	background-color: #2a3339;
+	transition: ease-out;
+	transition-duration: 0.3s;
+}
+
+/* Footer CSS Start */
+.footer {
+	position: relative;
+	background-color: #27374d;
+	color: #dde6ed;
+	text-align: center;
+	bottom: 0;
+	width: 100vw;
+	padding: 10px;
+	z-index: 1;
+}
+
+.footer .logo-footer {
+	width: 50%;
+	height: 50%;
+}
+
+.footer .footer-upper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.details-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	width: 200px;
+	height: 120px;
+}
+
+.details-footer a {
+	margin-top: 15px;
+	text-decoration: none;
+	cursor: pointer;
+	color: #dde6ed;
+}
+
+.details-footer a:hover {
+	color: #526d82;
+	transition: ease-out;
+	transition-duration: 0.3s;
+	text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.footer {
+		position: relative;
+		width: 100%;
+		margin-top: 60px;
+	}
+
+	.footer .footer-upper {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+
+	.details-footer {
+		width: 90%;
+		margin-bottom: 10px;
+	}
+}
+
+/* Footer CSS END */
