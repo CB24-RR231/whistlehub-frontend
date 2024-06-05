@@ -10,7 +10,7 @@ const LoginPage = ({ onLogin }) => {
       <section className="login-page">
         <article className="login-page__main">
           <h2>
-            Whistle <strong>Hub</strong>, <br />
+            Whistle<strong>Hub</strong>, <br />
             Lapor.
           </h2>
 
