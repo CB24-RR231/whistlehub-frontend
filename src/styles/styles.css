@@ -119,8 +119,6 @@ nav a:hover,
 	}
 }
 
-<<<<<<< HEAD
-=======
 .login-page, .register-page {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -160,5 +158,4 @@ nav a:hover,
 	cursor: pointer;
   }
 
->>>>>>> a8e0001d443176b4d461f6296f905e3528f3b53b
 /* Footer CSS END */
