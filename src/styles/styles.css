@@ -1,6 +1,6 @@
 /* Navigation CSS Start */
 .navigation {
-	width: 100%;
+	width: 75%;
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -58,7 +58,7 @@ nav a:hover,
 	color: #dde6ed;
 	text-align: center;
 	bottom: 0;
-	width: 100vw;
+	width: 75vw;
 	padding: 10px;
 	z-index: 1;
 }
@@ -135,7 +135,7 @@ nav a:hover,
 
   .login-input input, .register-input input {
 	display: block;
-	width: 50%;
+	width: 35%;
 	padding: 12px 8px;
 	margin: 8px 0;
 	font-family: 'Open Sans', sans-serif;
@@ -146,7 +146,7 @@ nav a:hover,
   
   .login-input button, .register-input button {
 	margin-top: 12px;
-	width: 52%;
+	width: 37%;
 	padding: 12px 8px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
