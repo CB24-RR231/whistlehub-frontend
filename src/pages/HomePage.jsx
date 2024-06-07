@@ -1,22 +1,16 @@
-import React from "react";
+// import React from "react";
 import LaporInput from "../components/LaporInput";
-import Footer from "../components/Footer";
-import Navigation from "../components/Navigation";
 
 const HomePage = ({ onLapor }) => {
   return (
-    <div>
-      <Navigation />
-      <section className="login-page">
-        <article className="login-page__main">
-          <h2>
+    <section className="home-page">
+      <article className="home-page__main">
+        <h2>
           <strong>Sampaikan Laporan Anda</strong>
-          </h2>
-          <LaporInput Lapor={onLapor} />
-        </article>
-      </section>
-      <Footer />
-    </div>
+        </h2>
+        <LaporInput Lapor={onLapor} />
+      </article>
+    </section>
   );
 };
 

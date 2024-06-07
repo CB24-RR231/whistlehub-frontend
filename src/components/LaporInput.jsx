@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import PropTypes from "prop-types";
 import useInput from '../Hooks/useInput';
 
@@ -10,7 +10,7 @@ function LaporInput({ lapor }) {
   const [Lampiran] = useInput("");
 
   return (
-    <form className="login-input">
+    <form className="form-input">
       <input
         type="text"
         value={Judul}

@@ -1,12 +1,27 @@
-import React from "react";
+// import React from "react";
 import HomePage from './pages/HomePage';
+import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
+import { Route, Routes } from "react-router-dom";
+import LoginPage from './pages/LoginPage';
 
 function App() {
 
   return (
-    <div className='app'>
-      <HomePage />
-    </div>
+    <>
+      <Navigation />
+      <Routes>
+        <Route
+          path='/*'
+          element={<HomePage />}
+        />
+        <Route
+          path='/login'
+          element={<LoginPage />}
+        />
+      </Routes>
+      <Footer />
+    </>
   )
 }
 

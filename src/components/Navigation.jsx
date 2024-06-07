@@ -8,12 +8,14 @@ function Navigation() {
 				<Link to='/menu'>Laporan</Link>
 				<Link to='/about'>About</Link>
 				<Link to='/contact'>Contact</Link>
-				<button
-					type='button'
-					className='sign-in-button'
-				>
-					Login
-				</button>
+				<Link to='/login'>
+					<button
+						type='button'
+						className='sign-in-button'
+					>
+						Login
+					</button>
+				</Link>
 			</nav>
 		</div>
 	);
