@@ -1,12 +1,11 @@
-import Footer from './components/Footer'
-import Navigation from './components/Navigation'
+import React from "react";
+import HomePage from './pages/HomePage';
 
 function App() {
 
   return (
     <div className='app'>
-      <Navigation />
-      <Footer />
+      <HomePage />
     </div>
   )
 }

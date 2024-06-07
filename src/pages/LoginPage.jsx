@@ -1,18 +1,23 @@
 import React from "react";
-import LaporInput from "../components/LaporInput";
+import LoginInput from "../components/LoginInput";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 
-const HomePage = ({ onLapor }) => {
+const LoginPage = ({ onLogin }) => {
   return (
     <div>
       <Navigation />
       <section className="login-page">
         <article className="login-page__main">
           <h2>
-          <strong>Sampaikan Laporan Anda</strong>
+            Whistle<strong>Hub</strong>, <br />
+            Lapor.
           </h2>
-          <LaporInput Lapor={onLapor} />
+
+          <LoginInput login={onLogin} />
+          <p>
+            Don't have an account? 
+          </p>
         </article>
       </section>
       <Footer />
@@ -20,4 +25,4 @@ const HomePage = ({ onLapor }) => {
   );
 };
 
-export default HomePage;
+export default LoginPage;
