@@ -19,12 +19,6 @@ function LaporInput({ lapor }) {
       />
       <input
         type="text"
-        value={Isi}
-        onChange={onIsiChange}
-        placeholder="Ketik isi Laporan Anda*"
-      />
-      <input
-        type="text"
         value={Date}
         onChange={onDateChange}
         placeholder="Pilih Tanggal Kejadian*"
@@ -34,6 +28,12 @@ function LaporInput({ lapor }) {
         value={Lokasi}
         onChange={onLokasiChange}
         placeholder="Ketik Lokasi Kejadian*"
+      />
+      <textarea
+        type="text"
+        value={Isi}
+        onChange={onIsiChange}
+        placeholder="Ketik isi Laporan Anda*"
       />
       <input type="file" value={Lampiran} placeholder="Upload Lampiran" />
       <button
