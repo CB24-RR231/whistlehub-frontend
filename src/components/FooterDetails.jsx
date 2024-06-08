@@ -1,4 +1,3 @@
-import logo from '../assets/logo-no-background.png';
 import { Link } from 'react-router-dom';
 
 function FooterDetails() {
@@ -6,7 +5,7 @@ function FooterDetails() {
     <div className="footer-upper">
       <div className="details-footer">
         <p>Developed by: </p>
-        <img src={logo} alt="logo" className="logo-footer" />
+        <p>WhistleHub Team</p>
       </div>
       <div className="details-footer">
         <p>Contact us:</p>

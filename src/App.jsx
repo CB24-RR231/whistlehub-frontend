@@ -3,7 +3,6 @@ import HomePage from './pages/HomePage';
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import { Route, Routes } from "react-router-dom";
-import LoginPage from './pages/LoginPage';
 
 function App() {
 
@@ -12,12 +11,8 @@ function App() {
       <Navigation />
       <Routes>
         <Route
-          path='/*'
+          path='/'
           element={<HomePage />}
-        />
-        <Route
-          path='/login'
-          element={<LoginPage />}
         />
       </Routes>
       <Footer />

@@ -1,3 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+	background-color: #dde6ed;
+	color-scheme: dark;
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+}
+
 /* Navigation CSS Start */
 .navigation {
 	width: 100%;
@@ -40,16 +57,110 @@ nav a:hover,
 }
 /* Navigation CSS End */
 
-.sign-in-button {
-	background-color: #526d82;
-	color: #dde6ed;
+/* Hero CSS Start */
+.hero-container {
+	position: relative;
+	width: 100%;
+	height: 60vh;
+	max-height: 700px;
+	overflow: hidden;
+	margin-top: 80px;
 }
 
-.sign-in-button:hover {
-	background-color: #2a3339;
-	transition: ease-out;
-	transition-duration: 0.3s;
+.hero-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
+
+.hero-text {
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.5
+	); /* Optional: background for better readability */
+	color: white;
+	padding: 1rem;
+	border-radius: 5px;
+	max-width: 90%; /* Ensures the text doesn't overflow */
+	box-sizing: border-box;
+}
+
+/* Responsive design Hero */
+@media (max-width: 768px) {
+	.hero-container {
+		margin-top: 80px;
+		height: 40vh;
+	}
+
+	.hero-text {
+		padding: 0.5rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-container {
+		margin-top: 80px;
+		height: 30vh;
+	}
+
+	.hero-text {
+		padding: 0.25rem;
+		font-size: 0.8rem;
+	}
+}
+/* Hero CSS End */
+
+/* About Whistlehub Homepage CSS Start */
+.about-whistlehub {
+	padding: 2rem;
+	text-align: left;
+	color: #27374d;
+}
+
+.about-whistlehub h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.about-whistlehub h4 {
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.5;
+	max-width: 800px;
+	text-indent: 2em;
+}
+
+/* Responsive Design About Whistlehub Homepage */
+@media (max-width: 768px) {
+	.about-whistlehub {
+		padding: 1rem;
+	}
+
+	.about-whistlehub h2 {
+		font-size: 1.5rem;
+	}
+
+	.about-whistlehub h4 {
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.about-whistlehub h2 {
+		font-size: 1.2rem;
+	}
+
+	.about-whistlehub h4 {
+		font-size: 0.8rem;
+	}
+}
+/* About Whistlehub Homepage CSS End */
 
 /* Footer CSS Start */
 .footer {
@@ -76,17 +187,23 @@ nav a:hover,
 	flex-wrap: wrap;
 }
 
+.domain {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .details-footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
 	width: 200px;
-	height: 120px;
+	height: 80px;
 }
 
 .details-footer a {
-	margin-top: 15px;
 	text-decoration: none;
 	cursor: pointer;
 	color: #dde6ed;
@@ -99,18 +216,17 @@ nav a:hover,
 	text-decoration: underline;
 }
 
-/* Responsive design */
+/* Responsive design Footer */
 @media (max-width: 768px) {
 	.footer {
 		position: relative;
-		width: 100%;
-		margin-top: 60px;
 	}
 
 	.footer .footer-upper {
 		flex-direction: column;
 		text-align: center;
 		align-items: center;
+		gap: 0;
 	}
 
 	.details-footer {
@@ -138,6 +254,7 @@ nav a:hover,
 	padding: 64px;
 	margin: 0 auto;
 	text-align: center;
+	color: black;
 }
 
 .form-input input,
