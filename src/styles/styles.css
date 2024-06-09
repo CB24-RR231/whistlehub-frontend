@@ -186,6 +186,7 @@ nav a:hover,
 
 .domain {
 	margin-top: 10px;
+	gap: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -256,7 +257,8 @@ nav a:hover,
 
 .home-page,
 .register-page,
-.login-page {
+.login-page,
+.check-lapor-page {
 	display: grid;
 	grid-template-columns: 1fr;
 	min-height: 100vh;
@@ -264,7 +266,8 @@ nav a:hover,
 
 .home-page__main,
 .register-page__main,
-.login-page__main {
+.login-page__main,
+.lapor-check-form {
 	display: flex;
 	gap: 16px;
 	justify-content: center;

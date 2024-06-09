@@ -4,17 +4,17 @@ function FooterDetails() {
   return (
     <div className="footer-upper">
       <div className="details-footer">
-        <p>Developed by: </p>
+        <p>Dikembangkan oleh: </p>
         <p>WhistleHub Team</p>
       </div>
       <div className="details-footer">
-        <p>Contact us:</p>
+        <p>Kontak kami:</p>
         <p>
           CB24-RR231@dicoding.org
         </p>
       </div>
       <div className="details-footer">
-        <p>Follow your journey with:</p>
+        <p>Ikuti kami di:</p>
         <Link to='https://www.dicoding.com/'>Dicoding</Link>
       </div>
     </div>

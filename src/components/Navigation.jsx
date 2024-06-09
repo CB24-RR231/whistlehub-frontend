@@ -5,8 +5,8 @@ function Navigation() {
 		<div className='navigation'>
 			<Link to='/' className='logo-nav'>WhistleHub</Link>
 			<nav>
-				<Link to='/menu'>Laporan</Link>
-				<Link to='/about'>About</Link>
+				<Link to='/cek-laporan'>Cek Laporan</Link>
+				<Link to='/about'>Tim kami</Link>
 				<Link to='/contact'>Contact</Link>
 			</nav>
 		</div>

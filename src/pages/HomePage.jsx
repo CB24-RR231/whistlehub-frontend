@@ -1,5 +1,5 @@
 // import React from "react";
-import LaporInput from "../components/LaporInput";
+import LaporInput from "../components/HomePage-Content/LaporInput";
 import Hero from "../components/HomePage-Content/Hero";
 import AboutWhistlehub from "../components/HomePage-Content/AboutWhistlehub";
 import PropTypes from "prop-types";
@@ -11,7 +11,7 @@ const HomePage = ({ onLapor }) => {
       <AboutWhistlehub />
       <article className="home-page__main">
         <h2>
-          <strong>Sampaikan Laporan Anda</strong>
+          <strong>Sampaikan Keluhan Disini:</strong>
         </h2>
         <LaporInput Lapor={onLapor} />
       </article>

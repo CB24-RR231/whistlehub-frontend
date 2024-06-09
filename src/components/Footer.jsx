@@ -10,7 +10,7 @@ function Footer() {
         <hr></hr>
         <div className="domain">
           <DomainIcon />
-          <p>Based on Indonesia</p>
+          <p>Di Indonesia</p>
         </div>
         <p>&copy; 2024 - WhistleHub. All rights reserved.</p>
       </div>
