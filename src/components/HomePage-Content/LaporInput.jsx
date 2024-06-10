@@ -18,10 +18,9 @@ function LaporInput({ lapor }) {
         placeholder="Ketik Judul Laporan Anda*"
       />
       <input
-        type="text"
+        type="date"
         value={Date}
         onChange={onDateChange}
-        placeholder="Pilih Tanggal Kejadian*"
       />
       <input
         type="text"
