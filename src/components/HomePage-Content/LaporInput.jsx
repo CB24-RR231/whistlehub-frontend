@@ -1,6 +1,6 @@
-// import React from "react";
 import PropTypes from "prop-types";
 import useInput from '../../Hooks/useInput';
+
 function LaporInput({ lapor }) {
   const [kepada, onKepadaChange] = useInput("");
   const [Judul, onJudulChange] = useInput("");
