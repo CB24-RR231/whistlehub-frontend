@@ -33,9 +33,46 @@ const api = (() => {
     return data;
   }
 
+  async function addForm({ kategori_id,
+    kepada,
+    judul,
+    isi,
+    lokasi,
+    telp,
+    lampiran }) {
+    const response = await _fetchWithAuth(`${BASE_URL}/laporans`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${getAccessToken()}`
+      },
+      body: JSON.stringify({
+        kategori_id,
+        kepada,
+        judul,
+        isi,
+        lokasi,
+        telp,
+        lampiran
+      })
+    })
+
+    const responseJson = await response.json()
+    const { status, message } = responseJson
+
+    if (status !== 'success') {
+      throw new Error(message)
+    }
+
+    const { data } = responseJson
+
+    return data;
+  }
+
   return {
     getAccessToken,
-    getLaporans
+    getLaporans,
+    addForm
   }
 })();
 

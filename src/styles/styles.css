@@ -285,7 +285,8 @@ nav a:hover,
 .form-input input,
 .register-input input,
 .login-input input,
-.form-input textarea {
+.form-input textarea,
+select {
 	display: block;
 	width: 100%;
 	padding: 12px 8px;
@@ -296,6 +297,7 @@ nav a:hover,
 	border: 2px solid rgb(77, 76, 76);
 	background-color: #f1f1f1;
 	color: black;
+	font-weight: 500;
 }
 
 textarea {
