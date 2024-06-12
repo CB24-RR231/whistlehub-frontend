@@ -7,7 +7,6 @@ function Navigation() {
 			<nav>
 				<Link to='/cek-laporan'>Cek Laporan</Link>
 				<Link to='/tentang-kami'>Tentang kami</Link>
-				<Link to='/contact'>Contact</Link>
 			</nav>
 		</div>
 	);

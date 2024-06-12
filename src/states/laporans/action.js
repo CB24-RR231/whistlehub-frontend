@@ -1,12 +1,12 @@
 import api from '../../utils/api'
 
 const ActionType = {
-  RECEIVE_LAPORANS: 'RECEIVE_LAPORANS',
+  GET_LAPORANS: 'GET_LAPORANS',
 }
 
-function receiveLaporans(laporans) {
+function getLaporans(laporans) {
   return {
-    type: ActionType.RECEIVE_LAPORANS,
+    type: ActionType.GET_LAPORANS,
     payload: {
       laporans
     }
@@ -17,8 +17,7 @@ function asyncGetLaporans() {
   return async (dispatch) => {
     try {
       const laporans = await api.getLaporans()
-      console.log(laporans);
-      dispatch(receiveLaporans(laporans))
+      dispatch(getLaporans(laporans))
     } catch (error) {
       alert(error.message)
     }
@@ -27,6 +26,6 @@ function asyncGetLaporans() {
 
 export {
   ActionType,
-  receiveLaporans,
+  getLaporans,
   asyncGetLaporans
 }

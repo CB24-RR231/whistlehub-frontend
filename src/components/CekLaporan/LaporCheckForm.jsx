@@ -2,16 +2,15 @@ import { useState } from 'react';
 import useInput from '../../Hooks/useInput';
 import LaporCheckItem from './LaporCheckItem';
 
-
 function LaporCheckForm() {
   const [laporanId, setLaporanId] = useInput('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // console.log(laporans);
   // Logic untuk mengecek laporan berdasarkan laporanId
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitted(true);
-    // console.log(`Mengecek laporan dengan ID: ${laporanId}`);
   };
 
   return (
