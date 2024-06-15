@@ -383,6 +383,13 @@ p {
 	margin-bottom: 16px;
 }
 
+.lapor-check-item .value {
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	padding: 0 10px;
+}
+
 .lapor-check-item .item {
 	display: grid;
 	grid-template-columns: 150px 1fr;
@@ -392,7 +399,7 @@ p {
 .lapor-check-item .item span.label {
 	font-weight: bold;
 	color: #333;
-	text-align: left;
+	text-align: right;
 }
 
 .lapor-check-item .item span.value {

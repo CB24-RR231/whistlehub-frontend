@@ -1,15 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useInput from '../../Hooks/useInput';
 import LaporCheckItem from './LaporCheckItem';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { asyncGetLaporans } from "../../states/laporans/action";
 
 function LaporCheckForm() {
   const [laporanId, setLaporanId] = useInput('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [filteredLaporan, setFilteredLaporan] = useState(null);
 
-  // Logic untuk mengecek laporan berdasarkan laporanId
+  const dispatch = useDispatch();
+  const laporans = useSelector((state) => state.laporans);
+
+  useEffect(() => {
+    dispatch(asyncGetLaporans());
+  }, [dispatch]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Filter laporan berdasarkan laporans.id yang sesuai
+    const foundLaporan = laporans.find((laporan) => laporan.id === parseInt(laporanId));
+    setFilteredLaporan(foundLaporan);
     setIsSubmitted(true);
   };
 
@@ -28,7 +39,7 @@ function LaporCheckForm() {
         </label>
         <button type="submit">Cek Laporan</button>
       </form>
-      {isSubmitted && <LaporCheckItem />}
+      {isSubmitted && <LaporCheckItem laporan={filteredLaporan} />}
     </div>
   );
 }
