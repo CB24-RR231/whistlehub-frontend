@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
 
-function LaporCheckItem({ laporanId }) {
+function LaporCheckItem() {
+
   return (
     <>
       <h2>Detail Laporan</h2>
       <div className="lapor-check-item">
-        <div className="item">
-          <span className="label">ID Laporan:</span>
-          <span className="value">{laporanId}</span>
-        </div>
         <div className="item">
           <span className="label">Judul laporan:</span>
           <span className="value">[Masukkan judul laporan di sini]</span>

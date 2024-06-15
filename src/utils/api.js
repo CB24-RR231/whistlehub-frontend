@@ -19,17 +19,8 @@ const api = (() => {
   async function getLaporans() {
     const response = await _fetchWithAuth(`${BASE_URL}/laporans`);
     const responseJson = await response.json();
-    const { status, message } = responseJson
-    console.log('Parsed laporans data:', responseJson);
-
-    if (status !== 'success') {
-      throw new Error(message)
-    }
-
     // Extract the data array
     const { data } = responseJson;
-
-    // Return only the data array
     return data;
   }
 
@@ -58,12 +49,6 @@ const api = (() => {
     })
 
     const responseJson = await response.json()
-    const { status, message } = responseJson
-
-    if (status !== 'success') {
-      throw new Error(message)
-    }
-
     const { data } = responseJson
 
     return data;

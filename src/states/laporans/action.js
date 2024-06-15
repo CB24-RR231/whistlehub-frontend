@@ -1,4 +1,4 @@
-import api from '../../utils/api'
+import api from '../../utils/api';
 
 const ActionType = {
   GET_LAPORANS: 'GET_LAPORANS',
@@ -16,7 +16,7 @@ function getLaporans(laporans) {
 function asyncGetLaporans() {
   return async (dispatch) => {
     try {
-      const laporans = await api.getLaporans()
+      const laporans = await api.getLaporans();
       dispatch(getLaporans(laporans))
     } catch (error) {
       alert(error.message)
