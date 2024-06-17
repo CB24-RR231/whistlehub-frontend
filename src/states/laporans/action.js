@@ -2,6 +2,16 @@ import api from '../../utils/api';
 
 const ActionType = {
   GET_LAPORANS: 'GET_LAPORANS',
+  ADD_LAPORAN: 'ADD_LAPORAN'
+}
+
+function addLaporan(laporan) {
+  return {
+    type: ActionType.ADD_LAPORAN,
+    payload: {
+      laporan
+    }
+  }
 }
 
 function getLaporans(laporans) {
@@ -9,6 +19,17 @@ function getLaporans(laporans) {
     type: ActionType.GET_LAPORANS,
     payload: {
       laporans
+    }
+  }
+}
+
+function asyncAddLaporan(laporan) {
+  return async (dispatch) => {
+    try {
+      const newLaporan = await api.addForm(laporan);
+      dispatch(addLaporan(newLaporan))
+    } catch (error) {
+      alert(error.message)
     }
   }
 }
@@ -26,6 +47,8 @@ function asyncGetLaporans() {
 
 export {
   ActionType,
+  addLaporan,
   getLaporans,
+  asyncAddLaporan,
   asyncGetLaporans
 }

@@ -2,9 +2,8 @@
 import LaporInput from "../components/HomePage-Content/LaporInput";
 import Hero from "../components/HomePage-Content/Hero";
 import AboutWhistlehub from "../components/HomePage-Content/AboutWhistlehub";
-import PropTypes from "prop-types";
 
-const HomePage = ({ onLapor }) => {
+const HomePage = () => {
   return (
     <section className="home-page">
       <Hero />
@@ -13,14 +12,10 @@ const HomePage = ({ onLapor }) => {
         <h2>
           <strong>Sampaikan Keluhan Disini:</strong>
         </h2>
-        <LaporInput Lapor={onLapor} />
+        <LaporInput />
       </article>
     </section>
   );
-};
-
-HomePage.propTypes = {
-  onLapor: PropTypes.func.isRequired,
 };
 
 export default HomePage;

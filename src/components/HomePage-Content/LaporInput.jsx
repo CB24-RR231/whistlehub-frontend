@@ -1,19 +1,49 @@
-import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { asyncAddLaporan } from "../../states/laporans/action";
 import useInput from '../../Hooks/useInput';
+import { useState } from "react";
 
-function LaporInput({ lapor }) {
+function LaporInput() {
   const [kepada, onKepadaChange] = useInput("");
   const [Judul, onJudulChange] = useInput("");
   const [Isi, onIsiChange] = useInput("");
   const [Date, onDateChange] = useInput("");
   const [Lokasi, onLokasiChange] = useInput("");
   const [telp, onTelpChange] = useInput("");
-  const [Lampiran] = useInput("");
-  const [kategoriId, setKategoriId] = useInput("");
+  const [kategoriId, onKategoriIdChange] = useInput("");
+  const [Lampiran, setLampiran] = useState(null); // State to hold the selected file
+
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("kategori_id", kategoriId);
+    formData.append("kepada", kepada);
+    formData.append("judul", Judul);
+    formData.append("isi", Isi);
+    formData.append("lokasi", Lokasi);
+    formData.append("telp", telp);
+    formData.append("lampiran", Lampiran);
+    formData.append("date", Date);
+
+    // Console log the formData object
+    console.log("Form Data:", formData);
+    console.log("Judul:", Judul);
+
+    await dispatch(asyncAddLaporan(formData));
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setLampiran(file);
+  };
 
   return (
     <form className="form-input">
-      <select value={kategoriId} onChange={setKategoriId}>
+      <select value={kategoriId} onChange={onKategoriIdChange}>
         <option value="1">Kategori 1: Pengaduan Gangguan</option>
         <option value="2">Kategori 2: Permohonan Pasang Baru</option>
         <option value="3">Kategori 3: Permintaan Informasi</option>
@@ -53,19 +83,20 @@ function LaporInput({ lapor }) {
         onChange={onIsiChange}
         placeholder="Ketik isi Laporan Anda*"
       />
-      <input type="file" value={Lampiran} placeholder="Upload Lampiran" />
+      <input
+        type="file"
+        onChange={handleFileChange}
+        placeholder="Upload Lampiran"
+        accept=".jpg,.jpeg,.png,.gif,.pdf" // acceptable file types
+      />
       <button
         type="button"
-        onClick={() => lapor({ Judul, Isi, Date, Lokasi, Lampiran })}
+        onClick={handleSubmit}
       >
         Lapor!
       </button>
     </form>
   );
 }
-
-LaporInput.propTypes = {
-  lapor: PropTypes.func.isRequired,
-};
 
 export default LaporInput;
