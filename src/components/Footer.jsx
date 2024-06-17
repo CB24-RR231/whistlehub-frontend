@@ -8,9 +8,10 @@ function Footer() {
       <div className="copyright">
         <FooterDetails />
         <hr></hr>
-        <p>
-          <DomainIcon />Based on Indonesia
-        </p>
+        <div className="domain">
+          <DomainIcon />
+          <p>Di Indonesia</p>
+        </div>
         <p>&copy; 2024 - WhistleHub. All rights reserved.</p>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import PropTypes from "prop-types";
 import useInput from '../Hooks/useInput';
 
@@ -28,7 +28,7 @@ function LoginInput({ login }) {
 }
 
 LoginInput.propTypes = {
-    login: PropTypes.func.isRequired,
-  };
-  
-  export default LoginInput;
+  login: PropTypes.func.isRequired,
+};
+
+export default LoginInput;
