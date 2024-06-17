@@ -19,7 +19,7 @@ function LaporCheckForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Filter laporan berdasarkan laporans.id yang sesuai
-    const foundLaporan = laporans.find((laporan) => laporan.id === parseInt(laporanId));
+    const foundLaporan = laporans.find((laporan) => laporan.laporan_id === parseInt(laporanId));
     setFilteredLaporan(foundLaporan);
     setIsSubmitted(true);
   };

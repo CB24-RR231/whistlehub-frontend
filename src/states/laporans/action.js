@@ -27,7 +27,8 @@ function asyncAddLaporan(laporan) {
   return async (dispatch) => {
     try {
       const newLaporan = await api.addForm(laporan);
-      dispatch(addLaporan(newLaporan))
+      dispatch(addLaporan(newLaporan));
+      return newLaporan;
     } catch (error) {
       alert(error.message)
     }

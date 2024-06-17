@@ -1,10 +1,58 @@
 import PropTypes from 'prop-types';
 import { formatDate } from '../../utils/formatDate';
-
 function LaporCheckItem({ laporan }) {
+
   if (!laporan) {
-    return <div>Laporan tidak ditemukan</div>;
+    return <div>Laporan tidak ditemukan, silahkan cek id anda</div>;
   }
+
+  const renderLampiran = () => {
+    if (!laporan.lampiran) {
+      return <div>Tidak ada file/image yang dilampirkan</div>; // No lampiran provided
+    }
+
+    // Taking lampiran from backend
+    const lampiranUrl = `https://backendhub.lotaf.id/storage/${laporan.lampiran}`;
+    const extension = laporan.lampiran.split('.').pop().toLowerCase();
+
+    // Check if the extension is an image type
+    if (['jpeg', 'jpg', 'png'].includes(extension)) {
+      return <img src={lampiranUrl} alt="Lampiran" className="lampiran-image" />;
+    } else {
+      // For other file types, provide a download link
+      return (
+        <div className="lampiran-file">
+          <a href={lampiranUrl} target="_blank" rel="noopener noreferrer">
+            Download Lampiran
+          </a>
+        </div>
+      );
+    }
+  };
+
+  const renderBuktiSelesai = () => {
+    if (!laporan.bukti_selesai) {
+      return <div>Tidak ada file/image yang dilampirkan</div>; // No bukti provided
+    }
+
+    // take bukti_selesai from backend
+    const buktiSelesaiUrl = `https://backendhub.lotaf.id/storage/${laporan.bukti_selesai}`;
+    const extension = laporan.lampiran.split('.').pop().toLowerCase();
+
+    // Check if the extension is an image type
+    if (['jpeg', 'jpg', 'png'].includes(extension)) {
+      return <img src={buktiSelesaiUrl} alt="Lampiran" className="lampiran-image" />;
+    } else {
+      // For other file types, provide a download link
+      return (
+        <div className="lampiran-file">
+          <a href={buktiSelesaiUrl} target="_blank" rel="noopener noreferrer">
+            Download Lampiran
+          </a>
+        </div>
+      );
+    }
+  };
 
   return (
     <>
@@ -20,7 +68,7 @@ function LaporCheckItem({ laporan }) {
         </div>
         <div className="item">
           <span className="label">Tanggal pelaporan:</span>
-          <span className="value">{formatDate(laporan.created_at)}</span>
+          <span className="value">{formatDate(laporan.tanggal_kejadian)}</span>
         </div>
         <div className="item">
           <span className="label">Lokasi kejadian:</span>
@@ -29,6 +77,22 @@ function LaporCheckItem({ laporan }) {
         <div className="item">
           <span className="label">Isi laporan:</span>
           <span className="value">{laporan.isi}</span>
+        </div>
+        <div className="item">
+          <span className="label">Status:</span>
+          <span className={`value ${laporan.status === 1 ? "green" : "red"}`} >{laporan.status === 1 ? "Laporan sudah diproses" : "Laporan masih di review"}</span>
+        </div>
+        <div className="item image-or-file">
+          <span className="label">Lampiran:</span>
+          <span className="value">
+            {renderLampiran()}
+          </span>
+        </div>
+        <div className="item image-or-file">
+          <span className="label">Bukti Selesai:</span>
+          <span className="value">
+            {renderBuktiSelesai(laporan.bukti_selesai)}
+          </span>
         </div>
       </div>
     </>
@@ -45,11 +109,9 @@ LaporCheckItem.propTypes = {
     lokasi: PropTypes.string.isRequired,
     telp: PropTypes.string,
     lampiran: PropTypes.string,
+    status: PropTypes.number,
+    tanggal_kejadian: PropTypes.string.isRequired,
     bukti_selesai: PropTypes.string,
-    review: PropTypes.string,
-    status: PropTypes.string,
-    created_at: PropTypes.string.isRequired,
-    updated_at: PropTypes.string.isRequired,
   })
 };
 
